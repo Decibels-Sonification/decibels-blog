@@ -2,27 +2,34 @@
 const { tags } = Astro.props;
 ---
 
-<style>
-    .tags {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 2rem;
-    }
-
-    .tag {
-        padding: 0.5rem 1 rem;
-        color: white;
-        background-color: #4c1d95;
-        text-decoration: none;
-    }
-</style>
 
 <div class="tags">
-    Tags: {
+    {
         tags.map((tag) => (
-            <a class="tag" href={`../posts/tag/${tag}`}>
+            <p><a class="tag" href={`../tags/${tag}`}>
                 {tag}
-            </a>
+            </a></p>
         ))
     }
 </div>
+
+<style>
+    a {
+        color: #00539f;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .tag {
+        margin: 0.25em;
+        border: dotted 1px #a1a1a1;
+        border-radius: 0.5em;
+        padding: 0.5em 1em;
+        font-size: 1.15em;
+        background-color: #f8fcfd;
+    }
+</style>
