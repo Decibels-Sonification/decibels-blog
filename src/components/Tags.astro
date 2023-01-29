@@ -1,0 +1,28 @@
+---
+const { tags } = Astro.props;
+---
+
+<style>
+    .tags {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .tag {
+        padding: 0.5rem 1 rem;
+        color: white;
+        background-color: #4c1d95;
+        text-decoration: none;
+    }
+</style>
+
+<div class="tags">
+    Tags: {
+        tags.map((tag) => (
+            <a class="tag" href={`../posts/tag/${tag}`}>
+                {tag}
+            </a>
+        ))
+    }
+</div>
