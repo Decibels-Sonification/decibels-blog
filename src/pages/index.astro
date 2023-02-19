@@ -1,8 +1,38 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Home Page";
+const pageTitle = "A Data Sonification Community";
 ---
 
+<style>
+	ul {
+		line-height: 160%;
+		text-align: center;
+		list-style-type: none; /* Remove bullets */
+		padding: 0; /* Remove padding */
+		margin: 0; /* Remove margins */
+	}
+</style>
 <BaseLayout pageTitle={pageTitle}>
-	<h2>My awesome blog subtitle</h2>
+	<div class="text">
+		<h1>Decibels</h1>
+		<h2>a data sonification community</h2>
+		<ul>
+			<li>Share tips, learnings, and advice with fellow sonifiers</li>
+			<li>Figure out what works in sonification, together</li>
+			<li>Get a wider audience for your work</li>
+			<li>Create connections across different disciplines</li>
+			<li>
+				<a
+					href="https://www.dictionaryofobscuresorrows.com/post/174141113510/midding"
+					>Midding</a
+				> is warmly encouraged!
+			</li>
+		</ul>
+		<a href="https://discord.gg/rqZzNpkqTU">
+			<p class="invite">Join the community</p>
+		</a>
+		<p class="small">
+			Questions? <a href="mailto:numbersloud@gmail.com">Email us</a>.
+		</p>
+	</div>
 </BaseLayout>
